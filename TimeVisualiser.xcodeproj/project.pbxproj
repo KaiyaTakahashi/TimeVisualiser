@@ -18,6 +18,7 @@
 		D968FFC92872709B00CE1E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D968FFC72872709B00CE1E14 /* Main.storyboard */; };
 		D968FFCB2872709D00CE1E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D968FFCA2872709D00CE1E14 /* Assets.xcassets */; };
 		D968FFCE2872709D00CE1E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D968FFCC2872709D00CE1E14 /* LaunchScreen.storyboard */; };
+		D9AD04F32873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD04F22873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D968FFCA2872709D00CE1E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D968FFCD2872709D00CE1E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D968FFCF2872709D00CE1E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9AD04F22873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				D95794F628728E1500B8F75B /* SettingCollectionViewCell.swift */,
+				D9AD04F22873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				D968FFC42872709B00CE1E14 /* SceneDelegate.swift in Sources */,
 				D95794EF2872824700B8F75B /* HomeViewController.swift in Sources */,
 				D95794F42872857500B8F75B /* SettingItem.swift in Sources */,
+				D9AD04F32873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,11 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 let settingItems = [
-    "Account": SettingItem(name: "View profile", image: nil),
-    "Account": SettingItem(name: "View goals", image: nil),
-    "Setting": SettingItem(name: "Calendar Sync", image: UIImage(systemName: "calendar")),
-    "Setting": SettingItem(name: "Notification", image: nil),
-    "Setting": SettingItem(name: "Preferences", image: nil)
+    SettingItem(category: "Account", name: "View profile", image: UIImage(systemName: "person.fill")),
+    SettingItem(category: "Account", name: "View goals", image: UIImage(systemName: "target")),
+    SettingItem(category: "Setting", name: "Calendar Sync", image: UIImage(systemName: "calendar")),
+    SettingItem(category: "Setting", name: "Notification", image: UIImage(systemName: "person")),
+    SettingItem(category: "Setting", name: "Preferences", image: UIImage(systemName: "person"))
 ]
 
 class SettingCollectionViewController: UICollectionViewController {
@@ -35,7 +35,7 @@ class SettingCollectionViewController: UICollectionViewController {
     }
     
     struct Model {
-        var itemsBySection = [String: SettingItem]()
+        var itemsBySection = [SettingItem]()
     }
     
     var model = Model()
@@ -43,8 +43,11 @@ class SettingCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        collectionView.register(NamedSectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: "SectionHeader", withReuseIdentifier: "HeaderView")
+        createDataSource()
+        update()
+        createLayout()
     }
     
     func update() {
@@ -54,9 +57,54 @@ class SettingCollectionViewController: UICollectionViewController {
     }
     
     func updateCollectionView() {
-        let itemsBySection = model.itemsBySection.values.sorted { $0.name > $1.name }
-        let sectionIDs = model.itemsBySection.keys.sorted()
+        let sectionItems = model.itemsBySection.reduce(into: [ViewModel.Section: [ViewModel.Item]]()) { partialResult, item in
+            let section: ViewModel.Section
+            if item.category == "Account" {
+                section = .account
+            } else {
+                section = .setting
+            }
+            partialResult[section, default: []].append(item)
+        }
+        let sectionIDs = sectionItems.keys.sorted { $0.rawValue < $1.rawValue }
         
+        dataSource.applySnapshotUsing(SectionIDs: sectionIDs, itemsBySection: sectionItems)
     }
     
+    func createDataSource() {
+        self.dataSource = DataSourceType(collectionView: collectionView, cellProvider: { (collectionView, indexPath, itemIdentifier) -> SettingCollectionViewCell in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Setting", for: indexPath) as! SettingCollectionViewCell
+            cell.nameLabel.text = itemIdentifier.name
+            cell.image.image = itemIdentifier.image
+            return cell
+        })
+        
+        dataSource.supplementaryViewProvider = { (collectionView, kind, indexPath) in
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: "SectionHeader", withReuseIdentifier: "HeaderView", for: indexPath) as! NamedSectionHeaderCollectionReusableView
+            let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
+            
+            switch section {
+            case .setting:
+                header.backgroundColor = .systemGray4
+                header.nameLabel.text = "Setting"
+            case .account:
+                header.backgroundColor = .systemGray3
+                header.nameLabel.text = "Account"
+            }
+            return header
+        }
+    }
+    
+    func createLayout() {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(60))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
+        let section = NSCollectionLayoutSection(group: group)
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(55))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: "SectionHeader", alignment: .top)
+        section.boundarySupplementaryItems = [header]
+        section.supplementariesFollowContentInsets = false
+        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: section)
+    }
 }
