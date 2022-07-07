@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92F029228779714009E9978 /* CalendarSyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F029128779714009E9978 /* CalendarSyncViewController.swift */; };
 		D95794ED287280BB00B8F75B /* SettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */; };
 		D95794EF2872824700B8F75B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794EE2872824700B8F75B /* HomeViewController.swift */; };
 		D95794F12872825C00B8F75B /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794F02872825C00B8F75B /* GoalViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D92F029128779714009E9978 /* CalendarSyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSyncViewController.swift; sourceTree = "<group>"; };
 		D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewController.swift; sourceTree = "<group>"; };
 		D95794EE2872824700B8F75B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D95794F02872825C00B8F75B /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */,
 				D95794EE2872824700B8F75B /* HomeViewController.swift */,
 				D95794F02872825C00B8F75B /* GoalViewController.swift */,
+				D92F029128779714009E9978 /* CalendarSyncViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				D95794F12872825C00B8F75B /* GoalViewController.swift in Sources */,
 				D968FFC22872709B00CE1E14 /* AppDelegate.swift in Sources */,
 				D968FFC42872709B00CE1E14 /* SceneDelegate.swift in Sources */,
+				D92F029228779714009E9978 /* CalendarSyncViewController.swift in Sources */,
 				D95794EF2872824700B8F75B /* HomeViewController.swift in Sources */,
 				D95794F42872857500B8F75B /* SettingItem.swift in Sources */,
 				D9AD04F32873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift in Sources */,

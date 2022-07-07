@@ -107,4 +107,10 @@ class SettingCollectionViewController: UICollectionViewController {
         section.supplementariesFollowContentInsets = false
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: section)
     }
+    
+    @IBSegueAction func showSettingDetail(_ coder: NSCoder, sender: UICollectionViewCell?) -> UIViewController? {
+        guard let cell = sender, let indexPath = collectionView.indexPath(for: cell), let item = dataSource.itemIdentifier(for: indexPath) else { return nil }
+        return CalendarSyncViewController(coder: coder, item: item)
+    }
+    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ocw-RH-dey">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qdi-5M-uuf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ef-u1-3m8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="376"/>
+            <point key="canvasLocation" x="-284.05797101449275" y="375.66964285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="R4d-MX-YK0">
@@ -130,6 +130,7 @@
                                 <connections>
                                     <outlet property="image" destination="Kjd-bY-y1u" id="YCp-Ay-gDB"/>
                                     <outlet property="nameLabel" destination="fPm-Zj-zgf" id="0d2-NC-HPI"/>
+                                    <segue destination="Qdi-5M-uuf" kind="show" destinationCreationSelector="showSettingDetail:sender:segueIdentifier:" id="Nnq-sj-oM2"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -143,6 +144,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHi-G8-aGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1660.8695652173915" y="375.66964285714283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mtt-Yk-2HZ">
+            <objects>
+                <viewController id="Qdi-5M-uuf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kia-L7-a1x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI3-8U-3Wp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-Oo-FnL">
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="750"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyU-LE-bYe">
+                                                <rect key="frame" x="0.0" y="0.0" width="412" height="730"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JEY-d3-qk9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="412" height="730"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="JEY-d3-qk9" secondAttribute="bottom" id="9Rm-7l-ZKE"/>
+                                                    <constraint firstItem="JEY-d3-qk9" firstAttribute="top" secondItem="xyU-LE-bYe" secondAttribute="top" id="Bas-rp-NYF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JEY-d3-qk9" secondAttribute="trailing" id="D7F-iX-OgN"/>
+                                                    <constraint firstItem="JEY-d3-qk9" firstAttribute="leading" secondItem="xyU-LE-bYe" secondAttribute="leading" id="wYL-hM-Pm5"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="esA-CV-TLu">
+                                                <rect key="frame" x="0.0" y="730" width="412" height="20"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzn-dE-GOq">
+                                                        <rect key="frame" x="82.5" y="0.0" width="247" height="0.0"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Sync with Apple Calendar"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5J-Kz-YC0">
+                                                        <rect key="frame" x="82.5" y="20" width="247" height="0.0"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Sync with Google Calendar"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="T5J-Kz-YC0" firstAttribute="width" secondItem="esA-CV-TLu" secondAttribute="width" multiplier="0.6" id="Ohd-bd-IYE"/>
+                                                    <constraint firstItem="hzn-dE-GOq" firstAttribute="width" secondItem="esA-CV-TLu" secondAttribute="width" multiplier="0.6" id="Yfk-zr-KEy"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="750" id="qCo-sb-YDJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CMK-Oo-FnL" firstAttribute="top" secondItem="vI3-8U-3Wp" secondAttribute="top" id="GDl-Wn-3vx"/>
+                                    <constraint firstAttribute="bottom" secondItem="CMK-Oo-FnL" secondAttribute="bottom" id="YZP-Hl-Vig"/>
+                                    <constraint firstAttribute="trailing" secondItem="CMK-Oo-FnL" secondAttribute="trailing" id="oAd-Fr-Hqi"/>
+                                    <constraint firstItem="CMK-Oo-FnL" firstAttribute="leading" secondItem="vI3-8U-3Wp" secondAttribute="leading" id="oUa-5N-O8j"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7R-HH-YyR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c7R-HH-YyR" firstAttribute="trailing" secondItem="vI3-8U-3Wp" secondAttribute="trailing" id="6bj-He-06K"/>
+                            <constraint firstItem="CMK-Oo-FnL" firstAttribute="width" secondItem="kia-L7-a1x" secondAttribute="width" multiplier="0.995169" id="BnL-NZ-e3S"/>
+                            <constraint firstItem="c7R-HH-YyR" firstAttribute="bottom" secondItem="vI3-8U-3Wp" secondAttribute="bottom" id="TBh-kt-S8D"/>
+                            <constraint firstItem="vI3-8U-3Wp" firstAttribute="leading" secondItem="c7R-HH-YyR" secondAttribute="leading" id="bE6-Jd-HNC"/>
+                            <constraint firstItem="vI3-8U-3Wp" firstAttribute="top" secondItem="c7R-HH-YyR" secondAttribute="top" constant="52" id="wpG-xi-VO5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O9t-QE-mrV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFY-aR-dWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660.8695652173915" y="1066.7410714285713"/>
         </scene>
         <!--Goal-->
         <scene sceneID="MTL-ii-348">
