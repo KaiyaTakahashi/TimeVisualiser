@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qdi-5M-uuf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ocw-RH-dey">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -63,6 +63,7 @@
         <!--Setting-->
         <scene sceneID="SP0-uK-gqi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs8-xC-C1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gh6-1a-Skd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" image="line.horizontal.3" catalog="system" id="g3k-4i-YeB"/>
                     <toolbarItems/>
@@ -72,10 +73,9 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Uo6-GJ-wwa" kind="relationship" relationship="rootViewController" id="Fod-zr-5Ce"/>
+                        <segue destination="Uo6-GJ-wwa" kind="relationship" relationship="rootViewController" id="USP-qx-fwa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs8-xC-C1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1661" y="-462"/>
         </scene>
@@ -130,7 +130,7 @@
                                 <connections>
                                     <outlet property="image" destination="Kjd-bY-y1u" id="YCp-Ay-gDB"/>
                                     <outlet property="nameLabel" destination="fPm-Zj-zgf" id="0d2-NC-HPI"/>
-                                    <segue destination="Qdi-5M-uuf" kind="show" destinationCreationSelector="showSettingDetail:sender:segueIdentifier:" id="Nnq-sj-oM2"/>
+                                    <segue destination="Qdi-5M-uuf" kind="show" destinationCreationSelector="showDetail:sender:" id="Xnh-e3-2dv"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -143,7 +143,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHi-G8-aGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660.8695652173915" y="375.66964285714283"/>
+            <point key="canvasLocation" x="1661" y="376"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mtt-Yk-2HZ">
@@ -156,34 +156,43 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI3-8U-3Wp">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-Oo-FnL">
-                                        <rect key="frame" x="0.0" y="0.0" width="412" height="750"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CMK-Oo-FnL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyU-LE-bYe">
-                                                <rect key="frame" x="0.0" y="0.0" width="412" height="730"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JEY-d3-qk9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="412" height="730"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JEY-d3-qk9">
+                                                <rect key="frame" x="0.0" y="1" width="414" height="411.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="JEY-d3-qk9" secondAttribute="bottom" id="9Rm-7l-ZKE"/>
-                                                    <constraint firstItem="JEY-d3-qk9" firstAttribute="top" secondItem="xyU-LE-bYe" secondAttribute="top" id="Bas-rp-NYF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="JEY-d3-qk9" secondAttribute="trailing" id="D7F-iX-OgN"/>
-                                                    <constraint firstItem="JEY-d3-qk9" firstAttribute="leading" secondItem="xyU-LE-bYe" secondAttribute="leading" id="wYL-hM-Pm5"/>
+                                                    <constraint firstAttribute="width" secondItem="JEY-d3-qk9" secondAttribute="height" multiplier="1:1" id="nSv-W8-c7E"/>
                                                 </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="esA-CV-TLu">
-                                                <rect key="frame" x="0.0" y="730" width="412" height="20"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-y8-KXQ">
+                                                <rect key="frame" x="2.5" y="444" width="409" height="138"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sync your schedule to Apple Calendar or Google Calendar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ng-fC-J9O">
+                                                        <rect key="frame" x="0.0" y="0.0" width="409" height="41"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZZ-fP-xfe">
+                                                        <rect key="frame" x="0.0" y="41" width="409" height="97"/>
+                                                        <string key="text">Time Visualiser does not push the Schedule data, but rather, your application is requestion this infromation from Time Visualiser. The frequency of this sync may be between every 2 to 12 hours.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="esA-CV-TLu">
+                                                <rect key="frame" x="41.5" y="612" width="331" height="78"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzn-dE-GOq">
-                                                        <rect key="frame" x="82.5" y="0.0" width="247" height="0.0"/>
+                                                        <rect key="frame" x="66.5" y="0.0" width="198.5" height="34"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Sync with Apple Calendar"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5J-Kz-YC0">
-                                                        <rect key="frame" x="82.5" y="20" width="247" height="0.0"/>
+                                                        <rect key="frame" x="66.5" y="44" width="198.5" height="34"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Sync with Google Calendar"/>
                                                     </button>
@@ -195,7 +204,9 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="750" id="qCo-sb-YDJ"/>
+                                            <constraint firstItem="JEY-d3-qk9" firstAttribute="width" secondItem="CMK-Oo-FnL" secondAttribute="width" id="9ct-5D-wHb"/>
+                                            <constraint firstItem="5JU-y8-KXQ" firstAttribute="height" secondItem="CMK-Oo-FnL" secondAttribute="height" multiplier="0.2" id="R8e-St-0BO"/>
+                                            <constraint firstAttribute="height" constant="690" id="qCo-sb-YDJ"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -211,10 +222,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="c7R-HH-YyR" firstAttribute="trailing" secondItem="vI3-8U-3Wp" secondAttribute="trailing" id="6bj-He-06K"/>
-                            <constraint firstItem="CMK-Oo-FnL" firstAttribute="width" secondItem="kia-L7-a1x" secondAttribute="width" multiplier="0.995169" id="BnL-NZ-e3S"/>
+                            <constraint firstItem="CMK-Oo-FnL" firstAttribute="width" secondItem="kia-L7-a1x" secondAttribute="width" id="BnL-NZ-e3S"/>
                             <constraint firstItem="c7R-HH-YyR" firstAttribute="bottom" secondItem="vI3-8U-3Wp" secondAttribute="bottom" id="TBh-kt-S8D"/>
                             <constraint firstItem="vI3-8U-3Wp" firstAttribute="leading" secondItem="c7R-HH-YyR" secondAttribute="leading" id="bE6-Jd-HNC"/>
-                            <constraint firstItem="vI3-8U-3Wp" firstAttribute="top" secondItem="c7R-HH-YyR" secondAttribute="top" constant="52" id="wpG-xi-VO5"/>
+                            <constraint firstItem="vI3-8U-3Wp" firstAttribute="top" secondItem="c7R-HH-YyR" secondAttribute="top" id="wpG-xi-VO5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O9t-QE-mrV"/>
@@ -263,11 +274,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="target" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

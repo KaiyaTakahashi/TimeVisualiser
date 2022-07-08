@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		743094F57CA3B2F84CEFAB60 /* Pods_TimeVisualiser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800D463C429E71195EDCBD89 /* Pods_TimeVisualiser.framework */; };
 		D92F029228779714009E9978 /* CalendarSyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F029128779714009E9978 /* CalendarSyncViewController.swift */; };
 		D95794ED287280BB00B8F75B /* SettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */; };
 		D95794EF2872824700B8F75B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794EE2872824700B8F75B /* HomeViewController.swift */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B99B44A473675D84E7D90F1 /* Pods-TimeVisualiser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualiser.debug.xcconfig"; path = "Target Support Files/Pods-TimeVisualiser/Pods-TimeVisualiser.debug.xcconfig"; sourceTree = "<group>"; };
+		800D463C429E71195EDCBD89 /* Pods_TimeVisualiser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeVisualiser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82CE3E4425ED80828C5381C7 /* Pods-TimeVisualiser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualiser.release.xcconfig"; path = "Target Support Files/Pods-TimeVisualiser/Pods-TimeVisualiser.release.xcconfig"; sourceTree = "<group>"; };
 		D92F029128779714009E9978 /* CalendarSyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSyncViewController.swift; sourceTree = "<group>"; };
 		D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewController.swift; sourceTree = "<group>"; };
 		D95794EE2872824700B8F75B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743094F57CA3B2F84CEFAB60 /* Pods_TimeVisualiser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,8 @@
 			children = (
 				D968FFC02872709B00CE1E14 /* TimeVisualiser */,
 				D968FFBF2872709B00CE1E14 /* Products */,
+				ECF13BDC7C1727B77DB1F493 /* Pods */,
+				F8000FD709C9DB6A80C3C489 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +127,24 @@
 			path = TimeVisualiser;
 			sourceTree = "<group>";
 		};
+		ECF13BDC7C1727B77DB1F493 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B99B44A473675D84E7D90F1 /* Pods-TimeVisualiser.debug.xcconfig */,
+				82CE3E4425ED80828C5381C7 /* Pods-TimeVisualiser.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8000FD709C9DB6A80C3C489 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				800D463C429E71195EDCBD89 /* Pods_TimeVisualiser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D968FFD22872709D00CE1E14 /* Build configuration list for PBXNativeTarget "TimeVisualiser" */;
 			buildPhases = (
+				20371AE90220D10549DF01C6 /* [CP] Check Pods Manifest.lock */,
 				D968FFBA2872709B00CE1E14 /* Sources */,
 				D968FFBB2872709B00CE1E14 /* Frameworks */,
 				D968FFBC2872709B00CE1E14 /* Resources */,
+				206D040D43731FC94A913318 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +212,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20371AE90220D10549DF01C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeVisualiser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		206D040D43731FC94A913318 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeVisualiser/Pods-TimeVisualiser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeVisualiser/Pods-TimeVisualiser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeVisualiser/Pods-TimeVisualiser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D968FFBA2872709B00CE1E14 /* Sources */ = {
@@ -342,6 +411,7 @@
 		};
 		D968FFD32872709D00CE1E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B99B44A473675D84E7D90F1 /* Pods-TimeVisualiser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +439,7 @@
 		};
 		D968FFD42872709D00CE1E14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CE3E4425ED80828C5381C7 /* Pods-TimeVisualiser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
