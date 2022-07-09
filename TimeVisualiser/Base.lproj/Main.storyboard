@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wa8-Gq-qBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="376"/>
+            <point key="canvasLocation" x="1274" y="376"/>
         </scene>
         <!--Home-->
         <scene sceneID="9Fo-VO-Lgw">
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ef-u1-3m8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284.05797101449275" y="375.66964285714283"/>
+            <point key="canvasLocation" x="-891" y="376"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="R4d-MX-YK0">
@@ -52,6 +52,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="1ci-yO-OT1" kind="relationship" relationship="viewControllers" id="kx0-Y2-QIU"/>
+                        <segue destination="xw4-Ar-3Vm" kind="relationship" relationship="viewControllers" id="rlX-ub-Lef"/>
                         <segue destination="L7A-LQ-TQD" kind="relationship" relationship="viewControllers" id="7T6-3r-Mu1"/>
                         <segue destination="Gh6-1a-Skd" kind="relationship" relationship="viewControllers" id="png-Gb-COj"/>
                     </connections>
@@ -63,7 +64,6 @@
         <!--Setting-->
         <scene sceneID="SP0-uK-gqi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs8-xC-C1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gh6-1a-Skd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" image="line.horizontal.3" catalog="system" id="g3k-4i-YeB"/>
                     <toolbarItems/>
@@ -76,8 +76,9 @@
                         <segue destination="Uo6-GJ-wwa" kind="relationship" relationship="rootViewController" id="USP-qx-fwa"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs8-xC-C1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="-462"/>
+            <point key="canvasLocation" x="2387" y="-462"/>
         </scene>
         <!--Setting-->
         <scene sceneID="1IT-Qo-NnE">
@@ -139,11 +140,11 @@
                             <outlet property="delegate" destination="Uo6-GJ-wwa" id="7SV-Sy-pTh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Setting" largeTitleDisplayMode="always" id="rkm-v9-r0l"/>
+                    <navigationItem key="navigationItem" title="Setting" id="rkm-v9-r0l"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHi-G8-aGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="376"/>
+            <point key="canvasLocation" x="2388" y="376"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mtt-Yk-2HZ">
@@ -232,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFY-aR-dWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660.8695652173915" y="1066.7410714285713"/>
+            <point key="canvasLocation" x="2388" y="1067"/>
         </scene>
         <!--Goal-->
         <scene sceneID="MTL-ii-348">
@@ -251,7 +252,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohH-QJ-Xwf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="-462"/>
+            <point key="canvasLocation" x="1274" y="-477"/>
         </scene>
         <!--Home-->
         <scene sceneID="YHB-1S-eHp">
@@ -270,10 +271,182 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="On8-2i-HbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284.05797101449275" y="-462.05357142857139"/>
+            <point key="canvasLocation" x="-891" y="-462"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="Kbo-eY-TD3">
+            <objects>
+                <viewController id="Pxt-xJ-m41" customClass="CalendarViewController" customModule="TimeVisualiser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vcg-Qk-H8u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c0z-42-g99">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-T3-FFu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGd-3E-L0i">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="67.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.circle.fill" catalog="system" title=""/>
+                                                <connections>
+                                                    <action selector="previousMonthBtnTapped:" destination="Pxt-xJ-m41" eventType="touchUpInside" id="6Qf-bE-8Kf"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-y6-QsB">
+                                                <rect key="frame" x="138" y="0.0" width="138" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuE-kI-dTh">
+                                                <rect key="frame" x="276" y="0.0" width="138" height="67.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="nextMonthBtnTapped:" destination="Pxt-xJ-m41" eventType="touchUpInside" id="ZwU-fZ-Hxz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sgp-qZ-QAO">
+                                        <rect key="frame" x="0.0" y="67.5" width="414" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxp-Ew-dLg">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMR-mR-4hv">
+                                                <rect key="frame" x="59" y="0.0" width="59.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZT-ai-3jz">
+                                                <rect key="frame" x="118.5" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sS-Dw-GK6">
+                                                <rect key="frame" x="177.5" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d7-6D-Tim">
+                                                <rect key="frame" x="236.5" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjl-mI-T9t">
+                                                <rect key="frame" x="295.5" y="0.0" width="59.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oS2-8h-A9m">
+                                                <rect key="frame" x="355" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-nU-NFj">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="585"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HZu-IW-jDJ">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LXd-wm-NPg" customClass="CalendarCollectionViewCell" customModule="TimeVisualiser" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KNn-P7-rhz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtA-1v-BSq">
+                                                            <rect key="frame" x="59" y="20" width="10" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="VtA-1v-BSq" firstAttribute="centerY" secondItem="KNn-P7-rhz" secondAttribute="centerY" multiplier="0.5" id="OKk-cW-uQH"/>
+                                                        <constraint firstItem="VtA-1v-BSq" firstAttribute="centerX" secondItem="KNn-P7-rhz" secondAttribute="centerX" id="qpK-h2-1qQ"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <connections>
+                                                    <outlet property="dayOfMonth" destination="VtA-1v-BSq" id="prh-3e-TZV"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Dl-nU-NFj" secondAttribute="trailing" id="3Kl-de-e19"/>
+                                    <constraint firstItem="4Dl-nU-NFj" firstAttribute="top" secondItem="sgp-qZ-QAO" secondAttribute="bottom" id="BdT-ZC-57I"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Dl-nU-NFj" secondAttribute="bottom" id="Bt8-XH-JDY"/>
+                                    <constraint firstItem="vgP-T3-FFu" firstAttribute="height" secondItem="c0z-42-g99" secondAttribute="height" multiplier="0.1" id="SF3-tX-gQA"/>
+                                    <constraint firstItem="4Dl-nU-NFj" firstAttribute="leading" secondItem="c0z-42-g99" secondAttribute="leading" id="hqw-nL-z8r"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dpc-u6-YRg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c0z-42-g99" firstAttribute="leading" secondItem="dpc-u6-YRg" secondAttribute="leading" id="A6m-Hk-jkA"/>
+                            <constraint firstItem="dpc-u6-YRg" firstAttribute="trailing" secondItem="c0z-42-g99" secondAttribute="trailing" id="jvB-ha-Dbj"/>
+                            <constraint firstItem="c0z-42-g99" firstAttribute="top" secondItem="dpc-u6-YRg" secondAttribute="top" id="teq-w0-d6t"/>
+                            <constraint firstItem="dpc-u6-YRg" firstAttribute="bottom" secondItem="c0z-42-g99" secondAttribute="bottom" id="x4i-FF-gVk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7wB-9f-Xpz"/>
+                    <connections>
+                        <outlet property="calendarCollectionView" destination="4Dl-nU-NFj" id="BbZ-9g-GMM"/>
+                        <outlet property="monthYearLabel" destination="HXl-y6-QsB" id="D5M-sA-wzP"/>
+                        <outlet property="nextMonthBtn" destination="GuE-kI-dTh" id="xSQ-zh-5DR"/>
+                        <outlet property="previousMonthBtn" destination="lGd-3E-L0i" id="jsR-Rq-yfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qho-0K-xPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="376"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="l7j-zs-CRg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xw4-Ar-3Vm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" selectedImage="calendar" catalog="system" id="0DV-7h-b9D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BRE-GJ-AIE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pxt-xJ-m41" kind="relationship" relationship="rootViewController" id="A09-lU-Spw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfS-Fs-gUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="-462.05357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		743094F57CA3B2F84CEFAB60 /* Pods_TimeVisualiser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800D463C429E71195EDCBD89 /* Pods_TimeVisualiser.framework */; };
 		D92F029228779714009E9978 /* CalendarSyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F029128779714009E9978 /* CalendarSyncViewController.swift */; };
+		D932D884287920AC00E712C4 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932D883287920AC00E712C4 /* CalendarCollectionViewCell.swift */; };
+		D932D886287920DC00E712C4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932D885287920DC00E712C4 /* CalendarViewController.swift */; };
 		D95794ED287280BB00B8F75B /* SettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */; };
 		D95794EF2872824700B8F75B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794EE2872824700B8F75B /* HomeViewController.swift */; };
 		D95794F12872825C00B8F75B /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95794F02872825C00B8F75B /* GoalViewController.swift */; };
@@ -28,6 +30,8 @@
 		800D463C429E71195EDCBD89 /* Pods_TimeVisualiser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeVisualiser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CE3E4425ED80828C5381C7 /* Pods-TimeVisualiser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualiser.release.xcconfig"; path = "Target Support Files/Pods-TimeVisualiser/Pods-TimeVisualiser.release.xcconfig"; sourceTree = "<group>"; };
 		D92F029128779714009E9978 /* CalendarSyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSyncViewController.swift; sourceTree = "<group>"; };
+		D932D883287920AC00E712C4 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		D932D885287920DC00E712C4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D95794EC287280BB00B8F75B /* SettingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewController.swift; sourceTree = "<group>"; };
 		D95794EE2872824700B8F75B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D95794F02872825C00B8F75B /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 				D95794EE2872824700B8F75B /* HomeViewController.swift */,
 				D95794F02872825C00B8F75B /* GoalViewController.swift */,
 				D92F029128779714009E9978 /* CalendarSyncViewController.swift */,
+				D932D885287920DC00E712C4 /* CalendarViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -80,6 +85,7 @@
 			children = (
 				D95794F628728E1500B8F75B /* SettingCollectionViewCell.swift */,
 				D9AD04F22873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift */,
+				D932D883287920AC00E712C4 /* CalendarCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,7 +139,6 @@
 				3B99B44A473675D84E7D90F1 /* Pods-TimeVisualiser.debug.xcconfig */,
 				82CE3E4425ED80828C5381C7 /* Pods-TimeVisualiser.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D932D886287920DC00E712C4 /* CalendarViewController.swift in Sources */,
 				D95794F728728E1500B8F75B /* SettingCollectionViewCell.swift in Sources */,
 				D95794FA2872ADB600B8F75B /* UICollectionViewDiffableDataSource+ViewModel.swift in Sources */,
 				D95794ED287280BB00B8F75B /* SettingCollectionViewController.swift in Sources */,
@@ -268,6 +274,7 @@
 				D968FFC42872709B00CE1E14 /* SceneDelegate.swift in Sources */,
 				D92F029228779714009E9978 /* CalendarSyncViewController.swift in Sources */,
 				D95794EF2872824700B8F75B /* HomeViewController.swift in Sources */,
+				D932D884287920AC00E712C4 /* CalendarCollectionViewCell.swift in Sources */,
 				D95794F42872857500B8F75B /* SettingItem.swift in Sources */,
 				D9AD04F32873B7E90014B5E0 /* NamedSectionHeaderCollectionReusableView.swift in Sources */,
 			);
