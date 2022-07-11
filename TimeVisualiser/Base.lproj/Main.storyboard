@@ -281,38 +281,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c0z-42-g99">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-y6-QsB">
+                                <rect key="frame" x="160" y="145" width="94" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuE-kI-dTh">
+                                <rect key="frame" x="349" y="138" width="45" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="nextMonthBtnTapped:" destination="Pxt-xJ-m41" eventType="touchUpInside" id="ZwU-fZ-Hxz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGd-3E-L0i">
+                                <rect key="frame" x="20" y="138" width="45" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.circle.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="previousMonthBtnTapped:" destination="Pxt-xJ-m41" eventType="touchUpInside" id="6Qf-bE-8Kf"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="c0z-42-g99">
+                                <rect key="frame" x="0.0" y="177" width="414" height="636"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-T3-FFu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGd-3E-L0i">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="67.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.circle.fill" catalog="system" title=""/>
-                                                <connections>
-                                                    <action selector="previousMonthBtnTapped:" destination="Pxt-xJ-m41" eventType="touchUpInside" id="6Qf-bE-8Kf"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-y6-QsB">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="67.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuE-kI-dTh">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="67.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
-                                                <connections>
-                                                    <action selector="nextMonthBtnTapped:" destination="Pxt-xJ-m41" eventType="touchUpInside" id="ZwU-fZ-Hxz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sgp-qZ-QAO">
-                                        <rect key="frame" x="0.0" y="67.5" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxp-Ew-dLg">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
@@ -359,9 +354,9 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-nU-NFj">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="585"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="414" height="575.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HZu-IW-jDJ">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="HZu-IW-jDJ">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -400,9 +395,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4Dl-nU-NFj" secondAttribute="trailing" id="3Kl-de-e19"/>
-                                    <constraint firstItem="4Dl-nU-NFj" firstAttribute="top" secondItem="sgp-qZ-QAO" secondAttribute="bottom" id="BdT-ZC-57I"/>
                                     <constraint firstAttribute="bottom" secondItem="4Dl-nU-NFj" secondAttribute="bottom" id="Bt8-XH-JDY"/>
-                                    <constraint firstItem="vgP-T3-FFu" firstAttribute="height" secondItem="c0z-42-g99" secondAttribute="height" multiplier="0.1" id="SF3-tX-gQA"/>
                                     <constraint firstItem="4Dl-nU-NFj" firstAttribute="leading" secondItem="c0z-42-g99" secondAttribute="leading" id="hqw-nL-z8r"/>
                                 </constraints>
                             </stackView>
@@ -410,10 +403,16 @@
                         <viewLayoutGuide key="safeArea" id="dpc-u6-YRg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dpc-u6-YRg" firstAttribute="top" secondItem="GuE-kI-dTh" secondAttribute="top" constant="2" id="9cj-AP-d8t"/>
                             <constraint firstItem="c0z-42-g99" firstAttribute="leading" secondItem="dpc-u6-YRg" secondAttribute="leading" id="A6m-Hk-jkA"/>
+                            <constraint firstItem="HXl-y6-QsB" firstAttribute="centerY" secondItem="Vcg-Qk-H8u" secondAttribute="centerY" multiplier="0.35" id="JnD-Sv-Mlo"/>
+                            <constraint firstItem="dpc-u6-YRg" firstAttribute="top" secondItem="lGd-3E-L0i" secondAttribute="top" constant="2" id="Me5-WZ-MKO"/>
+                            <constraint firstItem="dpc-u6-YRg" firstAttribute="trailing" secondItem="GuE-kI-dTh" secondAttribute="trailing" constant="20" id="Nem-Ep-ALs"/>
+                            <constraint firstItem="lGd-3E-L0i" firstAttribute="leading" secondItem="dpc-u6-YRg" secondAttribute="leading" constant="20" id="NnA-w4-GxK"/>
+                            <constraint firstItem="c0z-42-g99" firstAttribute="top" secondItem="HXl-y6-QsB" secondAttribute="bottom" constant="8" symbolic="YES" id="TnH-fV-WCM"/>
                             <constraint firstItem="dpc-u6-YRg" firstAttribute="trailing" secondItem="c0z-42-g99" secondAttribute="trailing" id="jvB-ha-Dbj"/>
-                            <constraint firstItem="c0z-42-g99" firstAttribute="top" secondItem="dpc-u6-YRg" secondAttribute="top" id="teq-w0-d6t"/>
-                            <constraint firstItem="dpc-u6-YRg" firstAttribute="bottom" secondItem="c0z-42-g99" secondAttribute="bottom" id="x4i-FF-gVk"/>
+                            <constraint firstItem="HXl-y6-QsB" firstAttribute="centerX" secondItem="Vcg-Qk-H8u" secondAttribute="centerX" id="kg0-5f-gFo"/>
+                            <constraint firstItem="c0z-42-g99" firstAttribute="bottom" secondItem="dpc-u6-YRg" secondAttribute="bottom" id="sQW-n1-pg7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7wB-9f-Xpz"/>
@@ -426,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qho-0K-xPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="376"/>
+            <point key="canvasLocation" x="179.71014492753625" y="375.66964285714283"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="l7j-zs-CRg">
